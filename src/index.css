@@ -1,0 +1,378 @@
+:root {
+  /* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
+  --black: #000000;
+  --navy: #14213d;
+  --orange: #fca311;
+  --gray: #e5e5e5;
+  --white: #ffffff;
+
+  --bg: var(--black);
+  --surface: var(--navy);
+  --border: rgba(229, 229, 229, 0.2);
+  --text-muted: var(--gray);
+  --text: var(--white);
+  --text-h: var(--white);
+  --accent: var(--orange);
+  --accent-bg: rgba(252, 163, 17, 0.12);
+  --accent-border: rgba(252, 163, 17, 0.5);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 24px;
+  letter-spacing: -0.24px;
+}
+
+p {
+  margin: 0;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  display: inline-flex;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 24px 48px;
+}
+
+.project-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.project-box {
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.project-box:hover {
+  border-color: var(--accent-border);
+}
+
+.project-box--active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.project-box h3 {
+  padding-right: 24px;
+}
+
+.project-github-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--text-muted);
+  line-height: 0;
+  transition: color 0.15s;
+}
+
+.project-github-link:hover {
+  color: var(--accent);
+}
+
+.project-detail {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  text-align: left;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 12px 0;
+  list-style: none;
+}
+
+.tech-list li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pagination button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.about {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-button,
+.project-box {
+  flex: 1;
+  max-width: 320px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.core-skills h2 {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.skill-button {
+  flex: 0 1 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.skill-button:hover {
+  border-color: var(--accent-border);
+}
+
+.skill-button--active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.coffee-cup-wrap {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.coffee-cup {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-muted);
+  border-top: none;
+  border-radius: 4px 4px 14px 14px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.coffee-handle {
+  position: absolute;
+  top: 3px;
+  right: -11px;
+  width: 11px;
+  height: 14px;
+  border: 2px solid var(--text-muted);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  transition: border-color 0.15s;
+}
+
+.coffee-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  background: var(--accent);
+  transition: height 0.25s ease;
+}
+
+.steam {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  margin-left: -1.5px;
+  width: 3px;
+  height: 9px;
+  background: var(--text-muted);
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.steam::before,
+.steam::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  width: 3px;
+  height: 9px;
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+
+.steam::before {
+  left: -7px;
+}
+
+.steam::after {
+  left: 7px;
+}
+
+.skill-button:hover .coffee-cup,
+.skill-button:hover .coffee-handle,
+.skill-button--active .coffee-cup,
+.skill-button--active .coffee-handle {
+  border-color: var(--accent);
+}
+
+.skill-button:hover .coffee-fill,
+.skill-button--active .coffee-fill {
+  height: 70%;
+}
+
+.skill-button:hover .steam,
+.skill-button--active .steam {
+  opacity: 0.6;
+  animation: steam-rise 1.4s ease-in-out infinite;
+}
+
+.skill-button:hover .steam::before,
+.skill-button:hover .steam::after,
+.skill-button--active .steam::before,
+.skill-button--active .steam::after {
+  animation: steam-rise 1.4s ease-in-out infinite;
+}
+
+@keyframes steam-rise {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-4px) scaleY(1.15);
+    opacity: 0.3;
+  }
+}
+
+.project-box h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.project-box p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
