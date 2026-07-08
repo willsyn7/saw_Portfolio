@@ -6,6 +6,18 @@ import ProjectBox from './ProjectBox'
 import ProjectDetail from './ProjectDetail'
 import SkillButtons from './SkillButtons'
 
+const skillTechnologyAliases: Record<string, string[]> = {
+  AI: ['AWS Bedrock', 'Vertex AI', 'OpenAI'],
+  'JS/TS': ['JavaScript', 'TypeScript'],
+  NoSQL: ['MongoDB'],
+  'React.js': ['React'],
+}
+
+const getSkillMatches = (skill: string) => [
+  skill,
+  ...(skillTechnologyAliases[skill] ?? []),
+]
+
 export default function ProjectsSection() {
   const dispatch = useAppDispatch()
   const expandedProjectId = useAppSelector(
@@ -13,8 +25,10 @@ export default function ProjectsSection() {
   )
   const selectedSkills = useAppSelector((state) => state.projects.selectedSkills)
 
-  const filteredProjects = selectedSkills.length
-    ? projects.filter((p) => p.technologies.some((t) => selectedSkills.includes(t)))
+  const selectedTechnologies = selectedSkills.flatMap(getSkillMatches)
+
+  const filteredProjects = selectedTechnologies.length
+    ? projects.filter((p) => p.technologies.some((t) => selectedTechnologies.includes(t)))
     : projects
 
   const rows = chunk(filteredProjects, 3)

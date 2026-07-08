@@ -2,7 +2,7 @@
 export const skills: string[] = [
   'Golang',
   'JS/TS',
-  'Angular',
+  'Next.js',
   'React.js',
   'Python',
   'Airflow',
