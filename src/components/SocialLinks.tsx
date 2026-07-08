@@ -1,9 +1,8 @@
 import { GitHubIcon, LinkedInIcon } from './icons'
 
-// Placeholder URLs — replace with your real profiles.
 const links = [
-  { label: 'GitHub', href: 'https://github.com/', Icon: GitHubIcon },
-  { label: 'LinkedIn', href: 'https://linkedin.com/', Icon: LinkedInIcon },
+  { label: 'GitHub', href: 'https://github.com/willsyn7', Icon: GitHubIcon },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/saw-naing/', Icon: LinkedInIcon },
 ]
 
 export default function SocialLinks() {
