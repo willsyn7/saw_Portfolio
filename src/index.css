@@ -1,20 +1,18 @@
 :root {
-  /* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
-  --black: #000000;
-  --navy: #14213d;
-  --orange: #fca311;
-  --gray: #e5e5e5;
-  --white: #ffffff;
+  /* August Ash palette #7: Limewire */
+  --lime: #c6ff00;
+  --charcoal: #181a17;
+  --soft-black: #0d0f0c;
 
-  --bg: var(--black);
-  --surface: var(--navy);
-  --border: rgba(229, 229, 229, 0.2);
-  --text-muted: var(--gray);
-  --text: var(--white);
-  --text-h: var(--white);
-  --accent: var(--orange);
-  --accent-bg: rgba(252, 163, 17, 0.12);
-  --accent-border: rgba(252, 163, 17, 0.5);
+  --bg: var(--soft-black);
+  --surface: var(--charcoal);
+  --border: rgba(224, 232, 216, 0.2);
+  --text-muted: #b9c2b3;
+  --text: #edf2e9;
+  --text-h: #ffffff;
+  --accent: var(--lime);
+  --accent-bg: rgba(198, 255, 0, 0.1);
+  --accent-border: rgba(198, 255, 0, 0.55);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -125,6 +123,72 @@ body {
 
 .sidebar-resume:hover {
   background: var(--accent-bg);
+}
+
+.work-history {
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.work-history h2 {
+  margin: 8px 0 16px;
+  font-size: 18px;
+}
+
+.work-timeline {
+  margin: 0;
+  padding: 0 0 0 16px;
+  border-left: 1px solid var(--accent-border);
+  list-style: none;
+}
+
+.work-timeline li {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.work-timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.work-timeline li::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.work-timeline time {
+  display: block;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.work-timeline h3 {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.work-timeline p {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.work-timeline span {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 @media (max-width: 800px) {

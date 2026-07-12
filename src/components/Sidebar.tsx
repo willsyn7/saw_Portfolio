@@ -15,6 +15,18 @@ export default function Sidebar() {
       <a className="sidebar-resume" href="/resumes/Naing.Saw.Resume.BE.pdf" download>
         Download Resume (Backend)
       </a>
+
+      <section className="work-history" aria-labelledby="work-history-title">
+        <h2 id="work-history-title">Work History</h2>
+        <ol className="work-timeline">
+          <li>
+            <time dateTime="2024-05">May 2024 - Present</time>
+            <h3>Software Engineer</h3>
+            <p>OS Analytics</p>
+            <span>Open Source Web Analytics Platform</span>
+          </li>
+        </ol>
+      </section>
     </aside>
   )
 }

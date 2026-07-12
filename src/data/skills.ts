@@ -5,7 +5,6 @@ export const skills: string[] = [
   'Next.js',
   'React.js',
   'Python',
-  'Airflow',
   'AI',
   'AWS',
   'GCP',
