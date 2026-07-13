@@ -171,6 +171,6 @@ export const projects: Project[] = [
       'Vite',
       'Bootstrap',
     ],
-    link: 'https://github.com/',
+    link: 'https://github.com/willsyn7/Page_Parser',
   },
 ]
