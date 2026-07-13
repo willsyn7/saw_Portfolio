@@ -91,7 +91,7 @@ export const projects: Project[] = [
       'Cloud SQL',
       'Docker',
     ],
-    link: 'https://github.com/willsyn7/WorldLens',
+    link: 'https://github.com/willsyn7/WorldLens1',
   },
   {
     id: 'project-4',
